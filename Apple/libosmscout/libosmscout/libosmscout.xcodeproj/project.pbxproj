@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0669E31DCF56D0009F7616 /* BoundingBoxDataFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D0669E21DCF56D0009F7616 /* BoundingBoxDataFile.cpp */; };
 		F51E3EA3161A5F4000D51926 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51E3EA2161A5F4000D51926 /* Foundation.framework */; };
 		F51E3EFF161A5FEC00D51926 /* AreaAreaIndex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F51E3EB3161A5FEC00D51926 /* AreaAreaIndex.cpp */; };
 		F51E3F00161A5FEC00D51926 /* AreaNodeIndex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F51E3EB4161A5FEC00D51926 /* AreaNodeIndex.cpp */; };
@@ -167,6 +168,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D0669E11DCF56B0009F7616 /* BoundingBoxDataFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoundingBoxDataFile.h; path = ../../../Apple/libosmscout/libosmscout/libosmscout/BoundingBoxDataFile.h; sourceTree = "<group>"; };
+		2D0669E21DCF56D0009F7616 /* BoundingBoxDataFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoundingBoxDataFile.cpp; sourceTree = "<group>"; };
 		F51E3E9F161A5F4000D51926 /* libosmscout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libosmscout.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51E3EA2161A5F4000D51926 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F51E3EB3161A5FEC00D51926 /* AreaAreaIndex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AreaAreaIndex.cpp; path = ../../../../libosmscout/src/osmscout/AreaAreaIndex.cpp; sourceTree = "<group>"; };
@@ -377,6 +380,7 @@
 		F51E3EB0161A5F7300D51926 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				2D0669E21DCF56D0009F7616 /* BoundingBoxDataFile.cpp */,
 				F56129AC1C5FEBEE00EA29EA /* AreaDataFile.cpp */,
 				F56129AD1C5FEBEE00EA29EA /* WayDataFile.cpp */,
 				F5A66AC81A46F5E7007AD752 /* TextSearchIndex.cpp */,
@@ -486,6 +490,7 @@
 		F51E3F30161A604300D51926 /* osmscout */ = {
 			isa = PBXGroup;
 			children = (
+				2D0669E11DCF56B0009F7616 /* BoundingBoxDataFile.h */,
 				F5A66AC71A46F5BF007AD752 /* TextSearchIndex.h */,
 				F556F00219C9D00700EAAA8B /* TypeFeatures.h */,
 				F550E56219B085C700CB6072 /* Navigation.h */,
@@ -714,6 +719,7 @@
 				F54C1E5418F480AC008C5EB3 /* POIService.cpp in Sources */,
 				F51E3F05161A5FEC00D51926 /* Location.cpp in Sources */,
 				F5CA00151B9FB524003B0EF6 /* Parsing.cpp in Sources */,
+				2D0669E31DCF56D0009F7616 /* BoundingBoxDataFile.cpp in Sources */,
 				F51E3F06161A5FEC00D51926 /* Node.cpp in Sources */,
 				F51E3F07161A5FEC00D51926 /* NumericIndex.cpp in Sources */,
 				F51E3F08161A5FEC00D51926 /* ObjectRef.cpp in Sources */,
