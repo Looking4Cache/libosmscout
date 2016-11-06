@@ -175,8 +175,8 @@ namespace osmscout {
         size_t idx=style.GetPatternId()-1;
         
         if (idx<patternImages.size() &&
-            patternImages[idx]) {
-
+            patternImages[idx]!=NULL) {
+            
             return true;
         }
         
@@ -202,8 +202,12 @@ namespace osmscout {
                 CGImageRef imgRef= [image CGImageForProposedRect:&rect context:[NSGraphicsContext currentContext] hints:NULL];
 #endif
                 CGImageRetain(imgRef);
-                patternImages.resize(patternImages.size()+1,imgRef);
-                style.SetPatternId(patternImages.size());
+                
+                if (idx>=patternImages.size()) {
+                    patternImages.resize(idx+1, NULL);
+                }
+                
+                patternImages[idx]=imgRef;
                 //std::cout << "Loaded image " << filename << " (" <<  imgWidth << "x" << imgHeight <<  ") => id " << style.GetPatternId() << std::endl;
                 return true;
             }
