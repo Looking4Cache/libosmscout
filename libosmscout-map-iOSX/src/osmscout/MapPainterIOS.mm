@@ -773,8 +773,8 @@ namespace osmscout {
             size_t patternIndex = fillStyle.GetPatternId()-1;
             CGFloat imgWidth = CGImageGetWidth(patternImages[patternIndex]);
             CGFloat imgHeight = CGImageGetHeight(patternImages[patternIndex]);
-            xOffset = remainder(xOffset, imgWidth);
-            yOffset = remainder(yOffset, imgHeight);
+            xOffset = remainder(xOffset/2, imgWidth);
+            yOffset = remainder(yOffset/2, imgHeight);
             CGPatternRef pattern = CGPatternCreate(patternImages[patternIndex], CGRectMake(0,0, imgWidth, imgHeight), CGAffineTransformTranslate(CGAffineTransformIdentity, xOffset, yOffset), imgWidth, imgHeight, kCGPatternTilingNoDistortion, true, &patternCallbacks);
             CGContextSetFillPattern(cg, pattern, &components);
             CGPatternRelease(pattern);
