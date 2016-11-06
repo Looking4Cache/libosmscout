@@ -746,7 +746,7 @@ namespace osmscout {
         //std::cout << "Loading tile: " << (std::string)tile->GetId() << std::endl;
 
         magnification.SetLevel(tile->GetId().GetLevel());
-
+          
         // TODO: Cache the type definitions, perhaps already in the StyleConfig?
         typeDefinition=GetTypeDefinition(parameter,
                                          styleConfig,
