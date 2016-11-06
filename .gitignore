@@ -50,6 +50,8 @@
 **/.project
 **/.settings
 **/.classpath
+**/xcuserdata
+.DS_Store
 
 # Backup
 **/*~
