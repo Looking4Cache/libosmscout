@@ -524,12 +524,12 @@ namespace osmscout {
         
         // check if the same label has been drawn near this one
         Vertex2D textOrigin(charOrigin);
-        auto its = wayLabels.equal_range(text);
+        /*auto its = wayLabels.equal_range(text);
         for (auto it = its.first; it != its.second; ++it) {
             if(distSq(textOrigin, *it->second) < MapPainterIOS::sameLabelMinDistanceSq){
                 return;
             }
-        }
+        }*/
         
         CGContextSaveGState(cg);
 #if TARGET_OS_IPHONE
