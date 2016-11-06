@@ -62,7 +62,9 @@ namespace osmscout {
         static constexpr double plateLabelMargin = 10.0;
         static constexpr double yLabelMargin = 10.0;
         static constexpr double contourLabelMargin = 50.0;
-        static constexpr double contourLabelSpace = 200.0;
+        // L4C: More space between labels
+        //static constexpr double contourLabelSpace = 200.0;
+        static constexpr double contourLabelSpace = 1500.0;
         static constexpr int labelRepeatMaxCount = 25;
         static constexpr double sameLabelMinDistanceSq = 1600.0;
         typedef std::unordered_multimap<std::string,Vertex2D *> WayLabelsMap;
