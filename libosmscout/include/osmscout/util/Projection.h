@@ -468,7 +468,7 @@ namespace osmscout {
              const Magnification& magnification,
              double dpi,
              size_t width, size_t height);
-
+     
     bool PixelToGeo(double x, double y,
                     double& lon, double& lat) const;
 
@@ -546,11 +546,6 @@ namespace osmscout {
 #endif
 
   protected:
-    virtual bool SetInternal(double lonMin,double latMin,
-                     double lonMax,double latMax,
-                     const Magnification& magnification,
-                     double dpi,
-                     size_t width,size_t height);
 
   public:
     TileProjection();
@@ -564,6 +559,13 @@ namespace osmscout {
     {
       return valid;
     }
+
+    // L4C: Public.. now the name lies
+    bool SetInternal(double lonMin,double latMin,
+                     double lonMax,double latMax,
+                     const Magnification& magnification,
+                     double dpi,
+                     size_t width,size_t height);
 
     inline bool Set(size_t tileX, size_t tileY,
                     const Magnification& magnification,
