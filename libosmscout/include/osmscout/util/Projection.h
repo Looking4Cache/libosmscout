@@ -50,16 +50,18 @@ namespace osmscout {
     size_t        width;          //!< Width of image
     size_t        height;         //!< Height of image
 
-    double        lonMin;         //!< Longitude of the upper left corner of the image
-    double        latMin;         //!< Latitude of the upper left corner of the image
-    double        lonMax;         //!< Longitude of the lower right corner of the image
-    double        latMax;         //!< Latitude of the lower right corner of the image
 
     double        pixelSize;      //!< Size of a pixel in meter
     double        meterInPixel;   //!< Number of on screen pixel for one meter on the ground
     double        meterInMM;      //!< Number of on screen millimeters for one meter on the ground
 
   public:
+
+    // L4C: Accessable from outside
+    double        lonMin;         //!< Longitude of the upper left corner of the image
+    double        latMin;         //!< Latitude of the upper left corner of the image
+    double        lonMax;         //!< Longitude of the lower right corner of the image
+    double        latMax;         //!< Latitude of the lower right corner of the image
 
     /**
      * This class is used to hide internal complexity concerned with batching GeoToPixel calls
