@@ -173,8 +173,8 @@ namespace osmscout {
                                  LabelDataRef& labelRef)
   {
     LabelEvent searchEvent;
-
-      if (label.bx2<0 || label.bx1>=width) {
+      
+    if (label.bx2<0 || label.bx1>=width) {
       return false;
     }
 
@@ -187,8 +187,7 @@ namespace osmscout {
 
     std::set<LabelEvent>::iterator event=events.lower_bound(searchEvent);
 
-    /*
-    std::cout << "--- Placing: ";
+    /*std::cout << "--- Placing: ";
     std::cout << label.text << " ";
     std::cout << label.bx1 << " - " << label.bx2 << ", "  << label.by1 << " - " << label.by2;
     std::cout << std::endl;
@@ -200,10 +199,10 @@ namespace osmscout {
       std::cout << event.label->bx1 << " - " << event.label->bx2 << ", "  << event.label->by1 << " - " << event.label->by2 << std::endl;
     }*/
 
-    while (event!=events.end() &&
+      while (event!=events.end() &&
            label.by2+maxSpace>=event->y) {
-      /*
-      std::cout << event->label->text << " ";
+      
+      /*std::cout << event->label->text << " ";
       std::cout << event->x << "," << event->y << " | ";
       std::cout << event->label->bx1 << " - " << event->label->bx2 << ", "  << event->label->by1 << " - " << event->label->by2 << std::endl;*/
       if (Intersects(*event->label,label)) {
@@ -217,7 +216,7 @@ namespace osmscout {
           // Restart the search :-/
           event=events.lower_bound(searchEvent);
         }
-        else if (label.priority>event->label->priority) {
+        else if (label.priority==event->label->priority) {
           LabelDataRef oldLabel=event->label;
 
           //std::cout << "DROPPING same prio and exit " << event->label->text << " " << label.priority << " vs. " << event->label->priority << std::endl;
