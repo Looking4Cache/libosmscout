@@ -41,15 +41,15 @@ namespace osmscout {
       magRegion    =                      256, //  8
       magProximity =                      512, //  9
       magCityOver  =                     1024, // 10
-      magCity      =                   2*1024, // 11
-      magSuburb    =                 2*2*1024, // 12
-      magDetail    =               2*2*2*1024, // 13
-      magClose     =             2*2*2*2*1024, // 14
-      magCloser    =           2*2*2*2*2*1024, // 15
-      magVeryClose =         2*2*2*2*2*2*1024, // 16
-      magBlock     =     2*2*2*2*2*2*2*2*1024, // 18
-      magStreet    =   2*2*2*2*2*2*2*2*2*1024, // 19
-      magHouse     = 2*2*2*2*2*2*2*2*2*2*1024  // 20
+      magCity      =                   2*1024, // 11    2048
+      magSuburb    =                 2*2*1024, // 12    4096
+      magDetail    =               2*2*2*1024, // 13    8192
+      magClose     =             2*2*2*2*1024, // 14    16384
+      magCloser    =           2*2*2*2*2*1024, // 15    32768
+      magVeryClose =         2*2*2*2*2*2*1024, // 16    65536
+      magBlock     =     2*2*2*2*2*2*2*2*1024, // 18    131072
+      magStreet    =   2*2*2*2*2*2*2*2*2*1024, // 19    262144
+      magHouse     = 2*2*2*2*2*2*2*2*2*2*1024  // 20    524288
     };
 
   private:
