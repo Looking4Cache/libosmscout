@@ -324,6 +324,9 @@ namespace osmscout {
                 CGContextSetShadowWithColor( cg, CGSizeMake( 0.0, 0.0 ), 2.0f, haloColor );
 #if TARGET_OS_IPHONE
                 [str drawAtPoint:CGPointMake(label.x, label.y) withFont:font];
+                // L4C: Mehr Schatten
+                CGContextSetShadowWithColor( cg, CGSizeMake( 0.0, 0.0 ), 3.0f, haloColor );
+                [str drawAtPoint:CGPointMake(label.x, label.y) withFont:font];
 #else
                 NSColor *color = [NSColor colorWithSRGBRed:style->GetTextColor().GetR() green:style->GetTextColor().GetG() blue:style->GetTextColor().GetB() alpha:style->GetTextColor().GetA()];
                 NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:font,NSFontAttributeName,color,NSForegroundColorAttributeName, nil];
