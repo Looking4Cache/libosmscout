@@ -822,9 +822,9 @@ namespace osmscout {
 
     overallTime.Stop();
 
-    if (overallTime.GetMilliseconds()>200) {
+    /*if (overallTime.GetMilliseconds()>200) {
       log.Warn() << "Retrieving all tile data took " << overallTime.ResultString();
-    }
+    }*/
 
     cache.CleanupCache();
 

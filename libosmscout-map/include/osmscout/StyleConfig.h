@@ -1523,8 +1523,6 @@ namespace osmscout {
     std::list<std::string>                     errors;
  
   private:
-    void Reset();
-
     void GetAllNodeTypes(std::list<TypeId>& types);
     void GetAllWayTypes(std::list<TypeId>& types);
     void GetAllAreaTypes(std::list<TypeId>& types);
@@ -1538,7 +1536,9 @@ namespace osmscout {
   public:
     StyleConfig(const TypeConfigRef& typeConfig);
     virtual ~StyleConfig();
-
+      
+    void Reset();
+      
     /**
      * Methods for registering LabelProvider-factories and and retrieving label providers
      */

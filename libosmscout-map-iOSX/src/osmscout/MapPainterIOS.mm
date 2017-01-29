@@ -53,6 +53,11 @@ namespace osmscout {
         }
     }
     
+    void MapPainterIOS::Reset(){
+        coordBuffer->Reset();
+        delete [] coordBuffer->buffer;
+    }
+    
     Font *MapPainterIOS::GetFont(const Projection& projection,
                                  const MapParameter& parameter,
                                  double fontSize)

@@ -79,6 +79,9 @@ namespace osmscout {
                      const MapParameter& parameter,
                      const MapData& data,
                      CGContextRef paintCG);
+        
+        void Reset();
+
     protected:
         bool HasIcon(const StyleConfig& styleConfig,
                      const MapParameter& parameter,
