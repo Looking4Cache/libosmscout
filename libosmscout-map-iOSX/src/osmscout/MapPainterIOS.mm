@@ -94,7 +94,6 @@ namespace osmscout {
              parameter,
              data);
         
-
         for ( auto it = wayLabels.begin(); it != wayLabels.end(); ++it ) {
             delete it->second;
         }
