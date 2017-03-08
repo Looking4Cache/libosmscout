@@ -94,8 +94,12 @@ namespace osmscout {
              parameter,
              data);
         
+
+        for ( auto it = wayLabels.begin(); it != wayLabels.end(); ++it ) {
+            delete it->second;
+        }
         wayLabels.clear();
-        
+
         return true;
     }
 
@@ -530,6 +534,7 @@ namespace osmscout {
                                          const std::string& text,
                                          size_t transStart, size_t transEnd){
         Font *font = GetFont(projection, parameter, style.GetSize());
+
         Vertex2D charOrigin;
         FollowPathHandle followPathHnd;
         followPathInit(followPathHnd, charOrigin, transStart, transEnd, false, false);
