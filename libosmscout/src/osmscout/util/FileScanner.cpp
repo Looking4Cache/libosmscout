@@ -117,6 +117,9 @@ namespace osmscout {
                          Mode mode,
                          bool useMmap)
   {
+    // L4C:
+    useMmap=false;
+      
     if (file!=NULL) {
       throw IOException(filename,"Error opening file for reading","File already opened");
     }
